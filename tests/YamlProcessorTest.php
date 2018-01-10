@@ -101,4 +101,26 @@ class YamlProcessorTest extends TestCase
 
         self::assertEquals(["parameters" => ["a" => "a"]], $out);
     }
+
+
+    /**
+     * Tests, that the given input is actually used in the output
+     */
+    public function testKeepExisting ()
+    {
+        $this->setUpFixtures();
+        $io = $this->getMockBuilder(IOInterface::class)->getMock();
+
+        $io
+            ->method("ask")
+            ->willReturnArgument(1);
+
+        $processor = new YamlProcessor($io);
+        $processor->process("{$this->fixtures}/existing.yaml");
+
+        $yaml = new Parser();
+        $out = $yaml->parseFile("{$this->fixtures}/existing.yaml");
+
+        self::assertEquals(["parameters" => ["a" => 1, "b" => 5, "c" => 3]], $out);
+    }
 }
