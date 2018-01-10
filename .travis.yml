@@ -7,11 +7,11 @@ php:
     - 7.2
 
 before_install:
-    - composer require php-coveralls/php-coveralls
-    - composer self-update --stable
+    - composer require php-coveralls/php-coveralls --no-interaction
+    - composer self-update --stable --no-interaction
 
 install:
-    - composer install
+    - composer install --no-interaction
 
 script:
     - mkdir -p build/logs
