@@ -165,4 +165,20 @@ class StructureCopyTest extends TestCase
         $result = $copy->copy(["a" => 1], []);
         self::assertNull($result["a"]);
     }
+
+
+    /**
+     * Tests that no invalid types are allowed
+     *
+     * @expectedException \RuntimeException
+     */
+    public function testNoResource ()
+    {
+        $io = $this->getMockBuilder(IOInterface::class)
+            ->getMock();
+
+        $copy = new StructureCopy($io);
+
+        $copy->copy(["a" => new \stdClass()], []);
+    }
 }
