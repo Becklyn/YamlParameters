@@ -53,7 +53,7 @@ class YamlProcessor
 
         // write status message
         $this->io->write(sprintf("%s the '%s' file",
-        $realFileExists ? "Updating" : "Creating",
+            $realFileExists ? "Updating" : "Creating",
             $file
         ));
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Becklyn\YamlParametersHandler;
+namespace Becklyn\YamlParametersHandler\Tests;
 
 
 use Becklyn\YamlParametersHandler\StructureCopy;

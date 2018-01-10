@@ -15,12 +15,13 @@
     },
     "require-dev": {
         "composer/composer": "^1.0",
+        "symfony/filesystem": "^4.0",
         "symfony/phpunit-bridge": "^4.0"
     },
     "autoload": {
         "psr-4": { "Becklyn\\YamlParametersHandler\\": "" }
     },
     "autoload-dev": {
-        "psr-4": { "Tests\\Becklyn\\YamlParametersHandler\\": "tests/" }
+        "psr-4": { "Becklyn\\YamlParametersHandler\\Tests\\": "tests/" }
     }
 }

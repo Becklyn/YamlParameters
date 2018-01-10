@@ -14,13 +14,7 @@ class ScriptHandler
     public static function run (Event $event) : void
     {
         $extras = $event->getComposer()->getPackage()->getExtra();
-
-        if (!isset($extras['parameters']))
-        {
-            throw new \InvalidArgumentException('The parameter handler needs to be configured through the extra.parameters setting.');
-        }
-
-        $config = $extras['parameters'];
+        $config = $extras["parameters"] ?? "config/parameters.yaml";
 
         if (!\is_string($config))
         {
