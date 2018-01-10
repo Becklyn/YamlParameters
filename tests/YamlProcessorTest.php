@@ -75,7 +75,7 @@ class YamlProcessorTest extends TestCase
         self::assertContains("# This file is auto-generated", $fileContent);
 
         $yaml = new Parser();
-        $in = $yaml->parseFile("{$this->fixtures}/test.yaml.dist");
+        $in = $yaml->parseFile("{$this->fixtures}/test.dist.yaml");
         $out = $yaml->parseFile("{$this->fixtures}/test.yaml");
         self::assertEquals($in, $out);
     }
