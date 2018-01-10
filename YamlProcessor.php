@@ -39,7 +39,7 @@ class YamlProcessor
      */
     public function process (string $file) : void
     {
-        $distFile = $file . ".dist";
+        $distFile = dirname($file) . "/" . \pathinfo($file, \PATHINFO_FILENAME) . ".dist." . \pathinfo($file, \PATHINFO_EXTENSION);
         $realFileExists = \file_exists($file);
         $yamlParser = new Parser();
 
