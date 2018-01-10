@@ -1,17 +1,17 @@
 <?php
 
-namespace Becklyn\YamlParametersHandler;
+namespace Becklyn\YamlParameters;
 
 
 use Composer\Script\Event;
 
 
-class ScriptHandler
+class Script
 {
     /**
      * @param Event $event
      */
-    public static function run (Event $event) : void
+    public static function handle (Event $event) : void
     {
         $extras = $event->getComposer()->getPackage()->getExtra();
         $config = $extras["parameters"] ?? "config/parameters.yaml";

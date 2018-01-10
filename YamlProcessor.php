@@ -1,6 +1,6 @@
 <?php
 
-namespace Becklyn\YamlParametersHandler;
+namespace Becklyn\YamlParameters;
 
 
 use Composer\IO\IOInterface;

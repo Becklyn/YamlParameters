@@ -1,9 +1,9 @@
 <?php
 
-namespace Becklyn\YamlParametersHandler\Tests;
+namespace Becklyn\YamlParameters\Tests;
 
 
-use Becklyn\YamlParametersHandler\StructureCopy;
+use Becklyn\YamlParameters\StructureCopy;
 use Composer\IO\IOInterface;
 use PHPUnit\Framework\TestCase;
 

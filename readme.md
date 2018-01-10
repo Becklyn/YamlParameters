@@ -17,7 +17,7 @@ Add the following code to your `composer.json`:
     },
     "scripts": {
         "yaml-parameters": [
-            "Becklyn\\YamlParametersHandler\\ScriptHandler::run"
+            "Becklyn\\YamlParameters\\Script::handle"
         ],
         "post-install-cmd": [
             "@yaml-parameters"

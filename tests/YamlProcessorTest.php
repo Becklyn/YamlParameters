@@ -1,9 +1,9 @@
 <?php
 
-namespace Becklyn\YamlParametersHandler\Tests;
+namespace Becklyn\YamlParameters\Tests;
 
 
-use Becklyn\YamlParametersHandler\YamlProcessor;
+use Becklyn\YamlParameters\YamlProcessor;
 use Composer\IO\IOInterface;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Filesystem\Filesystem;
