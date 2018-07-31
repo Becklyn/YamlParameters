@@ -2,7 +2,6 @@
 
 namespace Becklyn\YamlParameters;
 
-
 use Composer\IO\IOInterface;
 use Symfony\Component\Yaml\Inline;
 

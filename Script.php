@@ -2,7 +2,6 @@
 
 namespace Becklyn\YamlParameters;
 
-
 use Composer\Script\Event;
 
 
