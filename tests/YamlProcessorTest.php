@@ -123,4 +123,27 @@ class YamlProcessorTest extends TestCase
 
         self::assertEquals(["parameters" => ["a" => 1, "b" => 5, "c" => 3]], $out);
     }
+
+
+    /**
+     * Tests, that existing null values are not asked for
+     */
+    public function testSkipExistingNull ()
+    {
+        $this->setUpFixtures();
+        $io = $this->getMockBuilder(IOInterface::class)->getMock();
+
+        $io
+            ->expects(self::once())
+            ->method("ask")
+            ->willReturnArgument(1);
+
+        $processor = new YamlProcessor($io);
+        $processor->process("{$this->fixtures}/skip_existing_null.yaml");
+
+        $yaml = new Parser();
+        $out = $yaml->parseFile("{$this->fixtures}/skip_existing_null.yaml");
+
+        self::assertEquals(["parameters" => ["a" => null, "b" => "sth"]], $out);
+    }
 }
