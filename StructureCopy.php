@@ -44,9 +44,9 @@ class StructureCopy
                 continue;
             }
 
-            if (\is_scalar($value) ||null === $value)
+            if (\is_scalar($value) || null === $value)
             {
-                if (isset($target[$key]))
+                if (\array_key_exists($key, $target))
                 {
                     $merged[$key] = $target[$key];
                 }
